@@ -1,0 +1,87 @@
+2026-06-28 22:01:37,865 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-06-28 22:01:38,200 | INFO | Training churn rate: 21.41%
+2026-06-28 22:01:40,868 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-06-28 22:01:40,870 | INFO | Training Logistic Regression
+2026-06-28 22:01:41,048 | INFO | Training Random Forest
+2026-06-28 22:01:44,996 | INFO | Training XGBoost
+2026-06-29 19:33:32,978 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-06-29 19:33:33,343 | INFO | Training churn rate: 21.41%
+2026-06-29 19:33:37,221 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-06-29 19:33:37,222 | INFO | Training Logistic Regression
+2026-06-29 19:33:37,420 | INFO | Training Random Forest
+2026-06-29 19:33:41,446 | INFO | Training XGBoost
+2026-06-29 19:45:26,861 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-06-29 19:45:27,177 | INFO | Training churn rate: 21.41%
+2026-06-29 19:45:29,584 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-06-29 19:45:29,586 | INFO | Training Logistic Regression
+2026-06-29 19:45:29,790 | INFO | Training Random Forest
+2026-06-29 19:45:36,819 | INFO | Training XGBoost
+2026-06-29 20:35:01,897 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-06-29 20:35:02,268 | INFO | Training churn rate: 21.41%
+2026-06-29 20:35:04,738 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-06-29 20:35:04,739 | INFO | Training Logistic Regression
+2026-06-29 20:35:04,921 | INFO | Training Random Forest
+2026-06-29 20:35:09,730 | INFO | Training XGBoost
+2026-07-04 20:24:16,900 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-04 20:24:17,489 | INFO | Training churn rate: 21.41%
+2026-07-04 20:24:21,687 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-04 20:24:21,688 | INFO | Training Logistic Regression
+2026-07-04 20:24:21,997 | INFO | Training Random Forest
+2026-07-04 20:24:25,962 | INFO | Training XGBoost
+2026-07-04 20:31:21,914 | INFO | Training churn rate: 52.33%
+2026-07-04 21:40:08,802 | INFO | Training churn rate: 52.33%
+2026-07-08 13:54:26,178 | WARNING | Matplotlib is building the font cache; this may take a moment.
+2026-07-08 13:54:29,939 | INFO | generated new fontManager
+2026-07-08 13:54:31,332 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-08 13:54:31,929 | INFO | Training churn rate: 21.41%
+2026-07-08 13:54:37,103 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-08 13:54:37,104 | INFO | Training Logistic Regression
+2026-07-08 13:54:37,460 | INFO | Training Random Forest
+2026-07-08 13:54:42,054 | INFO | Training XGBoost
+2026-07-08 18:29:36,759 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-08 18:29:37,277 | INFO | Training churn rate: 21.41%
+2026-07-08 18:29:41,984 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-08 18:29:41,984 | INFO | Training Logistic Regression
+2026-07-08 18:29:42,214 | INFO | Training Random Forest
+2026-07-08 18:29:44,934 | INFO | Training XGBoost
+2026-07-09 01:27:33,930 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-09 01:27:34,447 | INFO | Training churn rate: 21.41%
+2026-07-09 01:27:38,783 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-09 01:27:38,784 | INFO | Training Logistic Regression
+2026-07-09 01:27:39,257 | INFO | Training Random Forest
+2026-07-09 01:27:44,960 | INFO | Training XGBoost
+2026-07-09 01:40:38,893 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-09 01:40:39,311 | INFO | Training churn rate: 21.41%
+2026-07-09 01:40:44,637 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-09 01:40:50,415 | INFO | Training Logistic Regression
+2026-07-09 01:41:26,956 | INFO | Training Random Forest
+2026-07-09 01:42:05,913 | INFO | Training XGBoost
+2026-07-09 01:44:40,203 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-09 01:44:42,588 | INFO | Training churn rate: 21.41%
+2026-07-09 01:44:47,903 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-09 01:46:11,133 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-09 01:46:11,511 | INFO | Training churn rate: 21.41%
+2026-07-09 01:46:13,961 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-09 01:46:16,880 | INFO | Training Logistic Regression
+2026-07-09 01:46:45,709 | INFO | Training Random Forest
+2026-07-09 01:47:11,762 | INFO | Training XGBoost
+2026-07-09 01:53:00,907 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-09 01:53:01,451 | INFO | Training churn rate: 21.41%
+2026-07-09 01:53:40,545 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-09 01:53:40,886 | INFO | Training churn rate: 21.41%
+2026-07-09 01:53:43,234 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-09 01:53:48,173 | INFO | Training Logistic Regression
+2026-07-09 01:54:10,451 | INFO | Training Random Forest
+2026-07-09 01:54:25,191 | INFO | Training XGBoost
+2026-07-09 13:35:20,555 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-09 13:35:20,978 | INFO | Training churn rate: 21.41%
+2026-07-09 13:35:25,259 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-09 13:35:28,211 | INFO | Training Logistic Regression
+2026-07-09 13:36:00,074 | INFO | Training Random Forest
+2026-07-09 13:36:28,288 | INFO | Training XGBoost
+2026-07-09 13:40:09,744 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\xyz\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-09 13:40:10,167 | INFO | Training churn rate: 21.41%
+2026-07-09 13:40:13,118 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-09 13:40:15,685 | INFO | Training Logistic Regression
+2026-07-09 13:40:33,970 | INFO | Training Random Forest
+2026-07-09 13:40:51,870 | INFO | Training XGBoost

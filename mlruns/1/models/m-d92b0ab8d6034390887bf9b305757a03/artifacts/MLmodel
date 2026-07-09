@@ -1,0 +1,23 @@
+artifact_path: file:C:/Users/HP/OneDrive - The Northcap university/Documents/xyz/customer-churn-prediction/mlruns/1/models/m-d92b0ab8d6034390887bf9b305757a03/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.14.5
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+mlflow_version: 3.14.0
+model_id: m-d92b0ab8d6034390887bf9b305757a03
+model_size_bytes: 9315
+model_uuid: m-d92b0ab8d6034390887bf9b305757a03
+prompts: null
+run_id: e4aa3d515420406a90d1b0329c8ff172
+utc_time_created: '2026-07-08 20:10:51.831368'

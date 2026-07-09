@@ -1,0 +1,22 @@
+artifact_path: file:C:/Users/HP/OneDrive - The Northcap university/Documents/xyz/customer-churn-prediction/mlruns/1/models/m-aae86df336eb4ab5bee09f3f657b760e/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.14.5
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: ubj
+    xgb_version: 3.3.0
+mlflow_version: 3.14.0
+model_id: m-aae86df336eb4ab5bee09f3f657b760e
+model_size_bytes: 694703
+model_uuid: m-aae86df336eb4ab5bee09f3f657b760e
+prompts: null
+run_id: 885e80dd2d7840fe85eaa80e11343a61
+utc_time_created: '2026-07-08 20:17:14.362177'
