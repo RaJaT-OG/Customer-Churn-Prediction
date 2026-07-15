@@ -37,7 +37,7 @@ Upload a CSV with *any* column names, and a smart fuzzy-matching mapper auto-det
 |---|---|
 | ML Pipeline | scikit-learn, XGBoost, imbalanced-learn (SMOTE), SHAP |
 | MLOps | MLflow, DVC, GitHub Actions, Docker |
-| Frontend | Streamlit, Plotly, Hugging Face Spaces, Python 3.11 |
+| Frontend | Streamlit, Plotly, Vercel, Python 3.11 |
 
 ## MLOps pipeline
 
@@ -46,7 +46,7 @@ Upload a CSV with *any* column names, and a smart fuzzy-matching mapper auto-det
 3. **SMOTE balancing** — handles class imbalance before training
 4. **Model selection** — Logistic Regression vs. Random Forest vs. XGBoost, best model wins by ROC-AUC
 5. **Experiment tracking** — every run logged to MLflow with metrics + artifacts
-6. **Deployment** — Dockerized Streamlit app (deployable to Hugging Face Spaces or any container host)
+6. **Deployment** — Dockerized Streamlit app deployed on Vercel
 7. **Monitoring** — drift detection and a manual/scheduled retraining trigger
 
 ---
@@ -55,14 +55,16 @@ Upload a CSV with *any* column names, and a smart fuzzy-matching mapper auto-det
 
 ```
 .
-├── app.py                        # Streamlit front-end
+├── app.py                         # Streamlit front-end
 ├── src/
-│   └── unified_churn_pipeline.py # feature engineering + training pipeline
+│   └── unified_churn_pipeline.py  # feature engineering + training pipeline
 ├── models/
 │   ├── unified_best_model.pkl
 │   └── unified_preprocessor.pkl
-├── mlruns/ or mlruns.db           # MLflow experiment tracking (generated locally)
-└── requirements.txt
+├── mlruns/ or mlruns.db            # MLflow experiment tracking (generated locally)
+├── Dockerfile                     # Docker container config
+├── requirements.txt
+└── README.md
 ```
 
 ---
@@ -98,9 +100,9 @@ If `models/unified_best_model.pkl` isn't already present:
 python -m src.unified_churn_pipeline
 ```
 
-This generates the trained model, preprocessor, and an MLflow tracking database (`mlruns.db` or `mlruns/`).
+This generates the trained model, preprocessor, and an MLflow tracking database (`mlruns.db`).
 
-### 5. Run the app
+### 5. Run the app locally
 
 ```bash
 streamlit run app.py
@@ -110,14 +112,42 @@ The app opens at `http://localhost:8501`.
 
 ---
 
-## Configuration
+## Deployment (Vercel)
 
-Set these as environment variables rather than editing the code directly:
+This app is deployed on **Vercel** using Docker.
+
+### Steps
+
+```bash
+# 1. Install Vercel CLI
+npm install -g vercel
+
+# 2. Login
+vercel login
+
+# 3. Deploy
+vercel --prod
+```
+
+Vercel automatically detects the `Dockerfile` and builds the container.
+
+### Environment variables on Vercel
+
+Set these in your Vercel project dashboard under **Settings → Environment Variables**:
+
+| Variable | Purpose |
+|---|---|
+| `ADMIN_PASSWORD` | Unlocks the Model Health admin page |
+| `VERCEL` | Auto-set by Vercel — used to detect cloud deployment |
+
+---
+
+## Configuration
 
 | Variable | Purpose | Default |
 |---|---|---|
 | `ADMIN_PASSWORD` | Unlocks the **Model Health** admin page | *(set your own — do not use the default in production)* |
-| `SPACE_ID` | Auto-set by Hugging Face Spaces to detect cloud deployment | — |
+| `VERCEL` | Auto-set by Vercel to detect cloud deployment | — |
 
 ```bash
 # Example (macOS/Linux)
@@ -141,4 +171,4 @@ $env:ADMIN_PASSWORD = "your-secure-password"
 
 ## License
 
-Add your preferred license here (e.g. MIT).
+MIT
