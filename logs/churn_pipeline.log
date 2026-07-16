@@ -85,3 +85,4 @@
 2026-07-09 13:40:15,685 | INFO | Training Logistic Regression
 2026-07-09 13:40:33,970 | INFO | Training Random Forest
 2026-07-09 13:40:51,870 | INFO | Training XGBoost
+

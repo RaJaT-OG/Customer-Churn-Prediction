@@ -374,7 +374,7 @@ def render_smart_mapper(user_df: pd.DataFrame) -> dict | None:
                 }
                 for t, c in mapped_items
             ])
-            st.dataframe(preview, use_container_width=True, hide_index=True)
+            st.dataframe(preview, width="stretch", hide_index=True)
 
     # ── Confirm button ─────────────────────────────────────────────────────
     can_confirm = not missing and not duplicates
@@ -382,7 +382,7 @@ def render_smart_mapper(user_df: pd.DataFrame) -> dict | None:
         "✅ Confirm mapping & continue",
         type="primary",
         disabled=not can_confirm,
-        use_container_width=True,
+        width="stretch",
     ):
         return {t: c for t, c in final_mapping.items() if c}
 
@@ -714,7 +714,7 @@ def render_shap_deep_dive(model, X_processed, feature_names):
             margin=dict(l=10, r=10, t=40, b=10),
             height=380,
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
         # ── Interpretation guide ───────────────────────────────────────
         st.caption(
@@ -927,7 +927,7 @@ st.sidebar.title("📊 Navigation")
 # ── Theme toggle ──────────────────────────────────────────────────────────
 current_theme = st.session_state.get("theme", "dark")
 toggle_label  = "☀️ Switch to Light" if current_theme == "dark" else "🌙 Switch to Dark"
-if st.sidebar.button(toggle_label, use_container_width=True, key="theme_toggle"):
+if st.sidebar.button(toggle_label, width="stretch", key="theme_toggle"):
     st.session_state["theme"] = "light" if current_theme == "dark" else "dark"
     st.rerun()
 st.sidebar.divider()
@@ -938,12 +938,12 @@ if "is_admin" not in st.session_state:
 with st.sidebar.expander("🔐 Admin login", expanded=False):
     if st.session_state["is_admin"]:
         st.success("Logged in as admin")
-        if st.button("Logout", use_container_width=True):
+        if st.button("Logout", width="stretch"):
             st.session_state["is_admin"] = False
             st.rerun()
     else:
         pwd = st.text_input("Password", type="password", key="admin_pwd")
-        if st.button("Login", use_container_width=True):
+        if st.button("Login", width="stretch"):
             if pwd == ADMIN_PASSWORD:
                 st.session_state["is_admin"] = True
                 st.rerun()
@@ -1062,7 +1062,7 @@ if page == "🏠 Home":
             data=make_template_csv(),
             file_name="churn_template.csv",
             mime="text/csv",
-            use_container_width=True,
+            width="stretch",
         )
     with info_col:
         st.markdown(
@@ -1141,8 +1141,8 @@ elif page == "🔮 Predict Churn":
             {"Model field": k, "→ Your column": v}
             for k, v in mapping.items()
         ])
-        st.dataframe(summary, use_container_width=True, hide_index=True)
-        if st.button("🔄 Change mapping", use_container_width=True):
+        st.dataframe(summary, width="stretch", hide_index=True)
+        if st.button("🔄 Change mapping", width="stretch"):
             st.session_state.pop("confirmed_mapping", None)
             st.rerun()
 
@@ -1194,7 +1194,7 @@ elif page == "🔮 Predict Churn":
             )
             st.dataframe(
                 result_df[display_cols],
-                use_container_width=True,
+                width="stretch",
                 column_config={
                     "Churn Probability": st.column_config.ProgressColumn(
                         "Churn Probability",
@@ -1256,7 +1256,7 @@ elif page == "🧍 Single Customer":
             "No primary key column detected in your dataset. "
             "A primary key column should have a unique value per row (e.g. customer_id, customer_ref)."
         )
-        st.dataframe(result_df.head(5), use_container_width=True)
+        st.dataframe(result_df.head(5), width="stretch")
         st.stop()
 
     # ── Let user pick which column is the ID ─────────────────────────────
@@ -1282,7 +1282,7 @@ elif page == "🧍 Single Customer":
             label_visibility="collapsed",
         )
     with btn_col:
-        search_clicked = st.button("🔍 Look up", type="primary", use_container_width=True)
+        search_clicked = st.button("🔍 Look up", type="primary", width="stretch")
 
     # Also support dropdown for quick browsing
     with st.expander("Or browse all customers", expanded=False):
@@ -1488,7 +1488,7 @@ elif page == "🧍 Single Customer":
                     height=360,
                     margin=dict(l=10, r=10, t=40, b=10),
                 )
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width="stretch")
                 st.caption(
                     "🔴 Red bars = features pushing this customer toward churning.  "
                     "🟢 Green bars = features keeping them loyal."
@@ -1557,7 +1557,7 @@ elif page == "📊 Dashboard":
             color=risk_counts.index,
             color_discrete_map=RISK_COLORS,
         )
-        st.plotly_chart(fig_pie, use_container_width=True)
+        st.plotly_chart(fig_pie, width="stretch")
 
     with col2:
         st.subheader("Risk by Industry")
@@ -1571,7 +1571,7 @@ elif page == "📊 Dashboard":
                 color="Risk Tier", color_discrete_map=RISK_COLORS,
                 barmode="stack",
             )
-            st.plotly_chart(fig_bar, use_container_width=True)
+            st.plotly_chart(fig_bar, width="stretch")
         else:
             st.caption("No industry column available in this dataset.")
 
@@ -1591,7 +1591,7 @@ elif page == "📊 Dashboard":
             yaxis={"categoryorder": "total ascending"},
             coloraxis_showscale=False,
         )
-        st.plotly_chart(fig_imp, use_container_width=True)
+        st.plotly_chart(fig_imp, width="stretch")
         st.caption("💡 For per-customer SHAP explanations, use the **🧍 Single Customer** page.")
     except AttributeError:
         st.caption("Feature importances aren't available for this model type.")
@@ -1614,7 +1614,7 @@ elif page == "📊 Dashboard":
         filtered_df = filtered_df[filtered_df["source_industry"] == industry_filter]
 
     st.caption(f"Showing {len(filtered_df):,} of {len(result_df):,} customers")
-    st.dataframe(filtered_df, use_container_width=True)
+    st.dataframe(filtered_df, width="stretch")
 
     st.download_button(
         "⬇️ Download filtered results as CSV",
@@ -1716,7 +1716,7 @@ elif page == "🏥 Model Health":
 
                 st.dataframe(
                     runs_df,
-                    use_container_width=True,
+                    width="stretch",
                     hide_index=True,
                     column_config={
                         "AUC": st.column_config.ProgressColumn(
@@ -1768,7 +1768,7 @@ elif page == "🏥 Model Health":
                             x=0.5,
                         ),
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(fig, width="stretch")
                 else:
                     st.caption("Run at least 2 experiments to see comparison chart.")
 
@@ -1820,7 +1820,7 @@ elif page == "🏥 Model Health":
                 "or when new labelled data is available."
             )
         with r_col2:
-            if st.button("🚀 Trigger retraining", type="primary", use_container_width=True):
+            if st.button("🚀 Trigger retraining", type="primary", width="stretch"):
                 import subprocess
                 log_placeholder = st.empty()
                 log_placeholder.info("⏳ Retraining started...")
@@ -1871,7 +1871,7 @@ elif page == "🏥 Model Health":
         ])
         st.dataframe(
             static_runs,
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
             column_config={
                 "AUC": st.column_config.ProgressColumn(
@@ -1907,7 +1907,7 @@ elif page == "🏥 Model Health":
                 y=-0.25, xanchor="center", x=0.5,
             ),
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
         st.divider()
 
@@ -1920,7 +1920,7 @@ elif page == "🏥 Model Health":
                 for k, v in params.items()
                 if v is not None
             ])
-            st.dataframe(params_df, use_container_width=True, hide_index=True)
+            st.dataframe(params_df, width="stretch", hide_index=True)
         except Exception:
             st.caption("Hyperparameters not available.")
 
