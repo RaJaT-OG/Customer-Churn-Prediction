@@ -1,3 +1,14 @@
+---
+title: Customer Churn Prediction
+emoji: 📊
+colorFrom: indigo
+colorTo: purple
+sdk: streamlit
+sdk_version: "1.38.0"
+app_file: app.py
+pinned: false
+---
+
 # Customer Churn Prediction
 
 A unified cross-industry churn prediction platform — one model that works across **e-commerce, banking, and telco** by mapping industry-specific columns onto a shared generic schema.
@@ -37,7 +48,7 @@ Upload a CSV with *any* column names, and a smart fuzzy-matching mapper auto-det
 |---|---|
 | ML Pipeline | scikit-learn, XGBoost, imbalanced-learn (SMOTE), SHAP |
 | MLOps | MLflow, DVC, GitHub Actions, Docker |
-| Frontend | Streamlit, Plotly, Vercel, Python 3.11 |
+| Frontend | Streamlit, Plotly, Hugging Face Spaces, Python 3.11 |
 
 ## MLOps pipeline
 
@@ -46,7 +57,7 @@ Upload a CSV with *any* column names, and a smart fuzzy-matching mapper auto-det
 3. **SMOTE balancing** — handles class imbalance before training
 4. **Model selection** — Logistic Regression vs. Random Forest vs. XGBoost, best model wins by ROC-AUC
 5. **Experiment tracking** — every run logged to MLflow with metrics + artifacts
-6. **Deployment** — Dockerized Streamlit app deployed on Vercel
+6. **Deployment** — Streamlit app deployed on Hugging Face Spaces
 7. **Monitoring** — drift detection and a manual/scheduled retraining trigger
 
 ---
@@ -55,16 +66,14 @@ Upload a CSV with *any* column names, and a smart fuzzy-matching mapper auto-det
 
 ```
 .
-├── app.py                         # Streamlit front-end
+├── app.py                        # Streamlit front-end
 ├── src/
-│   └── unified_churn_pipeline.py  # feature engineering + training pipeline
+│   └── unified_churn_pipeline.py # feature engineering + training pipeline
 ├── models/
 │   ├── unified_best_model.pkl
 │   └── unified_preprocessor.pkl
-├── mlruns/ or mlruns.db            # MLflow experiment tracking (generated locally)
-├── Dockerfile                     # Docker container config
-├── requirements.txt
-└── README.md
+├── mlruns/ or mlruns.db           # MLflow experiment tracking (generated locally)
+└── requirements.txt
 ```
 
 ---
@@ -74,8 +83,8 @@ Upload a CSV with *any* column names, and a smart fuzzy-matching mapper auto-det
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/customer-churn-predictor.git
-cd customer-churn-predictor
+git clone https://github.com/RaJaT-OG/Customer-Churn-Prediction.git
+cd Customer-Churn-Prediction
 ```
 
 ### 2. Set up a virtual environment
@@ -100,9 +109,9 @@ If `models/unified_best_model.pkl` isn't already present:
 python -m src.unified_churn_pipeline
 ```
 
-This generates the trained model, preprocessor, and an MLflow tracking database (`mlruns.db`).
+This generates the trained model, preprocessor, and an MLflow tracking database (`mlruns.db` or `mlruns/`).
 
-### 5. Run the app locally
+### 5. Run the app
 
 ```bash
 streamlit run app.py
@@ -112,42 +121,35 @@ The app opens at `http://localhost:8501`.
 
 ---
 
-## Deployment (Vercel)
+## Deploying on Hugging Face Spaces
 
-This app is deployed on **Vercel** using Docker.
+This repo is set up to run directly as a Hugging Face Space (the YAML block at the top of this file is what Spaces reads to configure the SDK, entry point, and card appearance).
 
-### Steps
-
-```bash
-# 1. Install Vercel CLI
-npm install -g vercel
-
-# 2. Login
-vercel login
-
-# 3. Deploy
-vercel --prod
-```
-
-Vercel automatically detects the `Dockerfile` and builds the container.
-
-### Environment variables on Vercel
-
-Set these in your Vercel project dashboard under **Settings → Environment Variables**:
-
-| Variable | Purpose |
-|---|---|
-| `ADMIN_PASSWORD` | Unlocks the Model Health admin page |
-| `VERCEL` | Auto-set by Vercel — used to detect cloud deployment |
+1. Create a new Space at [huggingface.co/new-space](https://huggingface.co/new-space) with **SDK: Streamlit**
+2. Push this repo to the Space's git remote:
+   ```bash
+   git remote add space https://huggingface.co/spaces/<your-username>/<space-name>
+   git push space main
+   ```
+   Use an HF access token as the password when prompted.
+3. If your `models/*.pkl` files are large, track them with Git LFS before pushing:
+   ```bash
+   git lfs track "*.pkl"
+   git add .gitattributes
+   ```
+4. Set `ADMIN_PASSWORD` as a **Space secret** (Settings → Repository secrets) rather than relying on the code default.
+5. The app auto-detects it's running on Spaces via the `SPACE_ID` environment variable, which HF sets automatically.
 
 ---
 
 ## Configuration
 
+Set these as environment variables rather than editing the code directly:
+
 | Variable | Purpose | Default |
 |---|---|---|
 | `ADMIN_PASSWORD` | Unlocks the **Model Health** admin page | *(set your own — do not use the default in production)* |
-| `VERCEL` | Auto-set by Vercel to detect cloud deployment | — |
+| `SPACE_ID` | Auto-set by Hugging Face Spaces to detect cloud deployment | — |
 
 ```bash
 # Example (macOS/Linux)

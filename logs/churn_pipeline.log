@@ -86,3 +86,129 @@
 2026-07-09 13:40:33,970 | INFO | Training Random Forest
 2026-07-09 13:40:51,870 | INFO | Training XGBoost
 
+2026-07-19 17:50:50,694 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-19 17:50:51,001 | INFO | Training churn rate: 21.41%
+2026-07-19 17:50:54,551 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-19 17:50:56,726 | INFO | Training Logistic Regression
+2026-07-19 17:51:20,805 | INFO | Training Random Forest
+2026-07-19 17:51:41,864 | INFO | Training XGBoost
+2026-07-19 17:55:20,419 | INFO | Unified dataset not found on disk — building it now...
+2026-07-19 17:57:03,568 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\customer-churn-prediction\data\unified_churn_dataset (1).csv
+2026-07-19 17:57:03,829 | INFO | Training churn rate: 18.54%
+2026-07-19 17:57:05,606 | INFO | SMOTE applied: 15,024 -> 24,478 samples
+2026-07-19 17:57:07,259 | INFO | Training Logistic Regression
+2026-07-19 17:57:26,061 | INFO | Training Random Forest
+2026-07-19 17:57:43,254 | INFO | Training XGBoost
+2026-07-19 18:02:11,793 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-19 18:02:12,288 | INFO | Training churn rate: 21.41%
+2026-07-19 18:02:14,617 | INFO | SMOTE applied: 18,138 -> 28,510 samples
+2026-07-19 18:02:17,299 | INFO | Training Logistic Regression
+2026-07-19 18:02:37,359 | INFO | Training Random Forest
+2026-07-19 18:02:54,077 | INFO | Training XGBoost
+2026-07-19 18:28:18,800 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-19 18:28:19,154 | INFO | Training churn rate: 21.40%
+2026-07-19 18:28:22,200 | INFO | SMOTE applied: 15,417 -> 24,234 samples
+2026-07-19 18:28:23,809 | INFO | Training Logistic Regression
+2026-07-19 18:28:46,949 | INFO | Training Random Forest
+2026-07-19 18:29:05,165 | INFO | Training XGBoost
+2026-07-19 18:30:56,388 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-19 18:30:56,931 | INFO | Training churn rate: 21.40%
+2026-07-19 18:30:59,978 | INFO | SMOTE applied: 15,417 -> 24,234 samples
+2026-07-19 18:31:01,739 | INFO | Training Logistic Regression
+2026-07-19 18:31:22,433 | INFO | Training Random Forest
+2026-07-19 18:31:42,425 | INFO | Training XGBoost
+2026-07-19 18:37:11,070 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-19 18:37:11,787 | INFO | Training churn rate: 21.40%
+2026-07-19 18:37:14,175 | INFO | SMOTE applied: 15,417 -> 24,234 samples
+2026-07-19 18:37:16,884 | INFO | Training Logistic Regression
+2026-07-19 18:37:50,980 | INFO | Training Random Forest
+2026-07-19 18:38:20,807 | INFO | Training XGBoost
+2026-07-19 18:44:49,229 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-19 18:44:49,695 | INFO | Training churn rate: 21.40%
+2026-07-19 18:44:52,346 | INFO | SMOTE applied: 15,417 -> 24,234 samples
+2026-07-19 18:44:55,152 | INFO | Training Logistic Regression
+2026-07-19 18:45:31,486 | INFO | Training Random Forest
+2026-07-19 18:46:01,230 | INFO | Training XGBoost
+2026-07-19 18:49:47,209 | INFO | setup plugin alembic.autogenerate.schemas
+2026-07-19 18:49:47,213 | INFO | setup plugin alembic.autogenerate.tables
+2026-07-19 18:49:47,213 | INFO | setup plugin alembic.autogenerate.types
+2026-07-19 18:49:47,213 | INFO | setup plugin alembic.autogenerate.constraints
+2026-07-19 18:49:47,213 | INFO | setup plugin alembic.autogenerate.defaults
+2026-07-19 18:49:47,213 | INFO | setup plugin alembic.autogenerate.comments
+2026-07-19 19:22:05,557 | INFO | setup plugin alembic.autogenerate.schemas
+2026-07-19 19:22:05,567 | INFO | setup plugin alembic.autogenerate.tables
+2026-07-19 19:22:05,567 | INFO | setup plugin alembic.autogenerate.types
+2026-07-19 19:22:05,571 | INFO | setup plugin alembic.autogenerate.constraints
+2026-07-19 19:22:05,571 | INFO | setup plugin alembic.autogenerate.defaults
+2026-07-19 19:22:05,571 | INFO | setup plugin alembic.autogenerate.comments
+2026-07-20 00:24:15,285 | INFO | Loading existing unified dataset from C:\Users\HP\OneDrive - The Northcap university\Documents\customer-churn-prediction\data\unified_churn_dataset.csv
+2026-07-20 00:24:16,181 | INFO | Training churn rate: 21.40%
+2026-07-20 00:24:22,084 | INFO | SMOTE applied: 15,417 -> 24,234 samples
+2026-07-20 00:24:26,700 | INFO | Training Logistic Regression
+2026-07-20 00:25:20,511 | INFO | Training Random Forest
+2026-07-20 00:26:05,531 | INFO | Training XGBoost
+2026-07-20 21:44:50,067 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-635' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-07-20 21:44:50,524 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-638' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-07-20 21:44:50,602 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-639' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-07-20 21:44:50,665 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-640' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-07-20 21:44:50,729 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-641' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
